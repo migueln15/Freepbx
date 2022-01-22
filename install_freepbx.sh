@@ -49,7 +49,7 @@ make install
 # Install Asterisk
 cd /usr/src
 tar xvfz asterisk-14.0.2.tar.gz
-rm -f asterisk-14-current.tar.gz
+rm -f asterisk-14.0.2.tar.gz
 cd asterisk-*
 contrib/scripts/install_prereq install
 ./configure --libdir=/usr/lib64 --with-pjproject-bundled
