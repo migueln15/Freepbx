@@ -23,7 +23,7 @@ adduser asterisk -M -c "Asterisk User"
 cd /usr/src
 wget http://downloads.asterisk.org/pub/telephony/dahdi-linux-complete/dahdi-linux-complete-current.tar.gz
 wget http://downloads.asterisk.org/pub/telephony/libpri/libpri-current.tar.gz
-wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-13-current.tar.gz
+wget http://downloads.asterisk.org/pub/telephony/asterisk/releases/asterisk-14.0.2.tar.gz
 wget -O jansson.tar.gz https://github.com/akheron/jansson/archive/v2.7.tar.gz
 wget http://www.pjsip.org/release/2.4/pjproject-2.4.tar.bz2
 
@@ -48,7 +48,7 @@ make install
 
 # Install Asterisk
 cd /usr/src
-tar xvfz asterisk-13-current.tar.gz
+tar xvfz asterisk-14.0.2.tar.gz
 rm -f asterisk-13-current.tar.gz
 cd asterisk-*
 contrib/scripts/install_prereq install
@@ -92,9 +92,9 @@ systemctl restart httpd.service
 
 # Install FreePBX
 cd /usr/src
-wget http://mirror.freepbx.org/modules/packages/freepbx/freepbx-13.0-latest.tgz
-tar xfz freepbx-13.0-latest.tgz
-rm -f freepbx-13.0-latest.tgz
+wget http://mirror.freepbx.org/modules/packages/freepbx/freepbx-14.0-latest.tgz
+tar xfz freepbx-14.0-latest.tgz
+rm -f freepbx-14.0-latest.tgz
 cd freepbx
 ./start_asterisk start
 ./install -n
